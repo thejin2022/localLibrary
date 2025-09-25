@@ -21,6 +21,12 @@ from django.views.generic import RedirectView
 from django.conf import settings
 from django.conf.urls.static import static
 
+""" 
+1. path('',) ''代表根目錄
+2. include('catalog.urls') 為了不要讓 , admin 中的 url patterns太肥
+   透過這函數把特定的 APP 直接轉接給該應用的 url 去處理 
+3.
+"""
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/', include('catalog.urls')),

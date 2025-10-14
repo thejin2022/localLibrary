@@ -1,5 +1,5 @@
 from django.contrib import admin
-
+from datetime import date
 # Register your models here.
 from .models import Author, Genre, Book, BookInstance
 
@@ -59,7 +59,7 @@ class BookInstanceAdmin(admin.ModelAdmin):
             'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back')
+            'fields': ('status', 'due_back','borrower')
         }),
     )
-      
+
